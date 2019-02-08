@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import logo from '../../images/logo.svg';
+import Logo from '../../images/logo.svg';
 
 const spin = keyframes`
   from {
@@ -22,12 +22,12 @@ const Header = styled.header`
   color: white;
 `;
 
-const Logo = styled.img.attrs({
-    src: logo,
-    alt: 'logo'
-})`
+const LogoWrapper = styled.span`
   animation: ${spin} infinite 20s linear;
   height: 20vmin;
+  > svg {
+    height: 100%;
+  }
 `;
 
 const Title = styled.h1`
@@ -38,7 +38,7 @@ const Title = styled.h1`
 export default () => {
   return (
     <Header>
-      <Logo />
+      <LogoWrapper><Logo /></LogoWrapper>
       <Title>Demo shop</Title>
     </Header>
   )

@@ -1,0 +1,7 @@
+src
+.nvmrc
+.eslintcache
+.eslintignore
+.dockerignore
+.prettierrc
+.prettierignore
